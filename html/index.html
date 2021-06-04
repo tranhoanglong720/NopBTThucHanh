@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BT</title>
+    <meta charset="utf-8">
+    <script src="/js/index.js"></script>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        #er1,#er2,#er3{
+            color:red;
+            font-style:italic;
+        }
+        #txtten{
+            margin-left:27px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Padanus Resort</h1>
+                <br>
+                <h2>Dat phong online</h2>
+            </div>
+        </div>
+        <form action="">
+        <div class="row">
+            <div class="col-8">
+                <div class="row mt-5">
+                    <div class="col-4">
+                        <p>Ho ten nguoi dat</p>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="txtTen" placeholder="Hoang" onblur="KTten();">
+                        <span  id="erten">(*)</span>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <p>Ngay den</p>
+                    </div>
+                    <div class="col-8">
+                        <input type="date" class="form-control" id="txtDen" placeholder="07/01/2020" onblur="kiemTraNgayDi();">
+                        <span  id="erngayden">(*)</span>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <p>Ngay di</p>
+                    </div>
+                    <div class="col-8">
+                        <input type="date" class="form-control" id="txtDi" placeholder="07/03/2020">
+                        <span class="text-danger" id="erngaydi">(*)</span>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <p>So ngay</p>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="txtSoNgay" placeholder="3"onblur= " SoNgay();">                    
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <p>Loai phong</p>
+                    </div>
+                    <div class="col-8">
+                        <select id="loaiphong" name="loaiphong">
+                            <option value="120000">Luxury</option>
+                            <option value="1500000">Superior</option>
+                            <option value="1900000">View Sea</option>
+                            <option value="1700000">Pool view</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <p>Gia phong</p>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" disabled value="120000" size="35" id="dongia" readonly><br>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <p>Dich vu</p>
+                    </div>
+                    <div class="col-8">
+                        <input type="checkbox">
+                        <label for="dv">Giat ui</label>
+                        <input type="checkbox" checked="checked">
+                        <label for="dv">Xe dua ruoc</label>
+                        <input type="checkbox">
+                        <label for="dv">An sang tai phong</label><br>
+                        <p><span id="error" class="font-italic text-danger"></span></p><br>
+                        <button type="button" class="btn btn-success mt-2" onclick="return dangky();">Đăng ký</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3" style="margin-left:70px;margin-top:200px;" >
+                <img src="/img/PIC.JPG">
+            </div>
+        </div>
+        </form>
+    </div>
+    <div class="container mt-5">
+    <div class="row">
+        <div class="row">
+            <h3>Phieu thanh toan</h3>
+        </div>
+        <div class="row mt-5">
+            <table class="table table-bodered table-striped table-hover m-3">
+                <thead>
+                    <tr>
+                        <th>Ho Va ten Nguoi dat</th>
+                        <th>NGay di</th>
+                        <th>Ngay Den</th>
+                        <th>So NGay</th>
+                        <th>Loai Phong </th>         
+                        <th>Dich vu</th>
+                        <th>Tong Chi phi</th>                        
+                    </tr>                          
+                </thead>
+                <tbody id="mytable"> 
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
